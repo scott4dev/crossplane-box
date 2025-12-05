@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: github-repository
+  name: crossplane-operations
   namespace: argocd
 spec:
   destination:
@@ -9,31 +9,12 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: github-repository
-    repoURL: https://github.com/scott4dev/crossplane-box
+    path: crossplane-operations
+    repoURL: https://github.com/scott4dev/crossplane-playground
     targetRevision: HEAD
   syncPolicy:
     automated:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: crossplane-resources
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: https://github.com/scott4dev/crossplane-box
-    path: yaml
-    targetRevision: HEAD
-  destination:
-    server: "https://kubernetes.default.svc"
-    namespace: default
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
 ---
