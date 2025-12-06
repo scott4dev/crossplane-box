@@ -1,23 +1,23 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: operation-examples
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: https://github.com/scott4dev/crossplane-playground
-    path: operations
-    targetRevision: HEAD
-  destination:
-    server: "https://kubernetes.default.svc"
-    namespace: default
-  syncPolicy:
-    automated:
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
----
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: operation-examples
+#   namespace: argocd
+# spec:
+#   project: default
+#   source:
+#     repoURL: https://github.com/scott4dev/crossplane-playground
+#     path: operations
+#     targetRevision: HEAD
+#   destination:
+#     server: "https://kubernetes.default.svc"
+#     namespace: default
+#   syncPolicy:
+#     automated:
+#       selfHeal: true
+#     syncOptions:
+#       - CreateNamespace=true
+# ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
