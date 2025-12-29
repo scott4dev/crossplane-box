@@ -1,12 +1,12 @@
-apiVersion: example.org/v1alpha1
-kind: Nginx
-metadata:
-  name: example-nginx
-  namespace: default
-spec:
-  replicas: 1
-  compositionRef:
-    name: nginx-service
+# apiVersion: example.org/v1alpha1
+# kind: Nginx
+# metadata:
+#   name: example-nginx
+#   namespace: default
+# spec:
+#   replicas: 1
+#   compositionRef:
+#     name: nginx-service
 # ---
 # apiVersion: example.org/v1alpha1
 # kind: Redis
