@@ -45,3 +45,9 @@ metadata:
 spec:
   package: xpkg.upbound.io/crossplane-contrib/provider-http:v1.0.11
 ---
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: crossplane-provider-opentofu
+spec:
+  package: xpkg.upbound.io/upbound/provider-opentofu:v1.0.2
