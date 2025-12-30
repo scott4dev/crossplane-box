@@ -8,16 +8,16 @@
 #   compositionRef:
 #     name: nginx-service
 # ---
-# apiVersion: example.org/v1alpha1
-# kind: Redis
-# metadata:
-#   name: example-redis
-#   namespace: default
-# spec:
-#   memoryMB: 512
-#   compositionRef:
-#     name: redis-service
-# ---
+apiVersion: example.org/v1alpha1
+kind: Redis
+metadata:
+  name: example-redis
+  namespace: default
+spec:
+  memoryMB: 512
+  compositionRef:
+    name: redis-service
+---
 # apiVersion: example.org/v1alpha1
 # kind: Postgres
 # metadata:
