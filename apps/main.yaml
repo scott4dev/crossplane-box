@@ -56,22 +56,22 @@ spec:
       selfHeal: true
       prune: true
 ---
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: example-with-crossplane
-  namespace: argocd
-spec:
-  project: default
-  source:
-    repoURL: https://github.com/scott4dev/crossplane-box
-    path: crossplane-example
-    targetRevision: HEAD
-  destination:
-    server: "https://kubernetes.default.svc"
-    namespace: default
-  syncPolicy:
-    automated:
-      selfHeal: true
-      prune: true
----
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: example-with-crossplane
+#   namespace: argocd
+# spec:
+#   project: default
+#   source:
+#     repoURL: https://github.com/scott4dev/crossplane-box
+#     path: crossplane-example
+#     targetRevision: HEAD
+#   destination:
+#     server: "https://kubernetes.default.svc"
+#     namespace: default
+#   syncPolicy:
+#     automated:
+#       selfHeal: true
+#       prune: true
+# ---
