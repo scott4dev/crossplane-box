@@ -14,7 +14,7 @@ metadata:
   name: example-redis
   namespace: default
 spec:
-  memoryMB: 512
+  memoryMB: 0.5Gi
   compositionRef:
     name: redis-service
 ---
